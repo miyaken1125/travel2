@@ -1,0 +1,13 @@
+
+<h1>会員登録</h1>
+ <%= form_for( @user , url: user_create_path) do |f| %>
+ 名前:<%= f.text_field :user_name %><br>
+ ニックネーム:<%= f.text_field :nick_name %><br>
+ 生年月日:<%= f.text_field :birthday %><br>
+ <%# 性別:<% f.text_field :user_gender %><br> 
+ 住所:<%= f.text_field :user_adress %><br>
+ Email:<%= f.text_field :Email %><br>
+ パスワード:<%= f.text_field :Password %><br>
+ 確認用パスワード:<%= f.text_field :Password_digest %><br>
+ <%= f.submit "登録"%>
+<% end %>

@@ -1,0 +1,581 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:4
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20210616224252)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_name" varchar, "nick_name" varchar, "birthday" varchar, "user_adress" varchar, "Email" varchar, "Password" varchar, "Password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210616224252_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210616224252"]]
+  ↳ bin/rails:4
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-16 22:48:02.088959"], ["updated_at", "2021-06-16 22:48:02.088959"]]
+  ↳ bin/rails:4
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-06-17 08:47:23 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (41.3ms)
+Completed 200 OK in 165ms (Views: 117.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-06-17 10:10:36 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 924ms (Views: 915.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-06-17 17:36:27 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-17 17:38:22 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...     params.permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-17 17:38:25 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...     params.permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-17 17:39:29 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...    params.require(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-17 17:40:26 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-17 17:42:02 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-17 17:53:18 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-18 09:01:14 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-18 09:01:58 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-18 09:04:38 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-18 09:04:43 +0900
+  
+SyntaxError (C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+...uire(:user).permit(:user_name :nick_name :birthday :user_adr...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...ser_name :nick_name :birthday :user_adress :Email :Password ...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...:birthday :user_adress :Email :Password :Password_conirmatio...
+...                              ^
+C:/Users/user/Desktop/VisualStadio/travel2/app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+...assword :Password_conirmation :user_gender)
+...                              ^):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+app/controllers/users_controller.rb:21: syntax error, unexpected ':', expecting end
+Started GET "/" for ::1 at 2021-06-18 09:07:30 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/" for ::1 at 2021-06-18 09:07:36 +0900
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:3:in `new'
+Started GET "/" for ::1 at 2021-06-18 09:08:07 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (79.6ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_gender' for #<User:0x000001c956a60ee8>
+Did you mean?  user_adress):
+    4:  名前:<% f.text_field :user_name %><br>
+    5:  ニックネーム:<% f.text_field :nick_name %><br>
+    6:  生年月日:<% f.text_field :birthday %><br>
+    7:  性別:<% f.text_field :user_gender %><br>
+    8:  住所:<% f.text_field :user_adress %><br>
+    9:  Email:<% f.text_field :Email %><br>
+   10:  パスワード:<% f.text_field :Password %><br>
+  
+app/views/users/new.html.erb:7:in `block in _app_views_users_new_html_erb__942428843_982127282780'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__942428843_982127282780'
+Started GET "/" for ::1 at 2021-06-18 09:08:41 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (269.1ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `fo' for #<#<Class:0x000001c956b206f8>:0x000001c956fc70a8>
+Did you mean?  for
+               f):
+     9:  Email:<% f.text_field :Email %><br>
+    10:  パスワード:<% f.text_field :Password %><br>
+    11:  確認用パスワード:<% f.text_field :Password_digest %><br>
+    12:  <%= fo.submit "登録"%>
+    13: <% end %>
+  
+app/views/users/new.html.erb:12:in `block in _app_views_users_new_html_erb__942428843_982129720620'
+app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__942428843_982129720620'
+Started GET "/" for ::1 at 2021-06-18 09:09:21 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 953ms (Views: 931.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-06-18 09:12:03 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 95ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2021-06-18 09:12:56 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nU0dWeH+81klPAVDtSkSW8vwMlUHU9smoWy1zaAteoHXrmnOAO8LsiGHpgIG/XVBduigHqbFm5FUoMedDG4Cgw==", "user"=>{"user_name"=>"宮田", "nick_name"=>"ミヤケン", "birthday"=>"1978年2月", "user_adress"=>"つくば市", "Email"=>"kmkmkm0820@gmail.com", "Password"=>"[FILTERED]", "Password_digest"=>"[FILTERED]"}, "commit"=>"ワン"}
+Unpermitted parameter: :Password_digest
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "nick_name", "birthday", "user_adress", "Email", "Password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_name", "宮田"], ["nick_name", "ミヤケン"], ["birthday", "1978年2月"], ["user_adress", "つくば市"], ["Email", "kmkmkm0820@gmail.com"], ["Password", "03010301"], ["created_at", "2021-06-18 00:12:56.614866"], ["updated_at", "2021-06-18 00:12:56.614866"]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to http://localhost:3000/users/show
+Completed 302 Found in 21ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/users/show" for ::1 at 2021-06-18 09:12:56 +0900
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreatePosts (20210618011417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreatePosts (20210618011417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-06-19 17:49:19 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.6) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-06-19 18:00:44 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.6) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-06-19 18:01:22 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.6) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreatePosts (20210618011417)
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-06-19 18:02:16 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.6) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
